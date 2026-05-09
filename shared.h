@@ -1,0 +1,10 @@
+// shared.h
+#pragma once
+#define IOCTL_SET_PID     CTL_CODE(FILE_DEVICE_UNKNOWN, 0x800)
+#define IOCTL_SET_FEATURES CTL_CODE(FILE_DEVICE_UNKNOWN,0x802)
+#define IOCTL_GET_FEATURES CTL_CODE(FILE_DEVICE_UNKNOWN,0x803)
+typedef struct {
+	ULONG pid;
+	HANDLE h;
+	BOOLEAN wh, aim;
+} GD;
